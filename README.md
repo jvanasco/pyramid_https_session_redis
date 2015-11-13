@@ -38,11 +38,19 @@ Then add this section
 requirements
 ============
 
-This package (obviously) requires pyramid and pyramid_redis https://github.com/ericrasmussen/pyramid_redis_sessions
+This package (obviously) requires `pyramid` and `pyramid_redis` https://github.com/ericrasmussen/pyramid_redis_sessions
 
 This package also requires `pyramid_https_session_core` https://github.com/jvanasco/pyramid_https_session_core
 
 
-license
+PyPi
+==========
+
+This package is not yet available on PyPi
+
+
+
+License
 =======
 
+MIT
