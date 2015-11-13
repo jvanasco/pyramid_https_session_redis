@@ -38,9 +38,9 @@ Then add this section
 requirements
 ============
 
-This package (obviously) requires pyramid and pyramid_redis
+This package (obviously) requires pyramid and pyramid_redis https://github.com/ericrasmussen/pyramid_redis_sessions
 
-This package also requires `pyramid_https_session_core`
+This package also requires `pyramid_https_session_core` https://github.com/jvanasco/pyramid_https_session_core
 
 
 license
