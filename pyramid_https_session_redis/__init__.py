@@ -39,6 +39,7 @@ def initialize_https_session_support(config, settings):
                                    'cookie_httponly',
                                    'assume_redis_lru',
                                    'detect_changes',
+                                   'deserialized_fails_new',
                                    ):
                     v = asbool(v)
                 https_options[option_name] = v

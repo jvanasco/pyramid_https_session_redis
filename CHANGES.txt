@@ -1,3 +1,6 @@
+0.1.1
+	added support for `deserialized_fails_new` bool
+
 0.1.0
 	fixed the dotted path
 
