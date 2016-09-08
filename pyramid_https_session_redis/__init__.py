@@ -20,14 +20,25 @@ class RedisConfigurator(pyramid_https_session_core.SessionBackendConfigurator):
                              }
 
 
-def initialize_https_session_support(config, settings):
+def initialize_https_session_support(config, settings, prefix_selected=None, register_factory=True):
     """
-    Parses config settings, builds a https session factory, registers it
+    Parses config settings, builds a https session factory, optionally registers it, returns it
+
+    Params:
+        `config`: pyramid config
+        `settings`: pyramid settings
+        `prefix_selected=None`: if specified, will only parse this prefix
+        `register_factory=True`: if `True`, will register the factory. If not true, the factory must be registered
+
+    Returns:
+        this returns the generated factory
     """
     https_options = {}
     https_prefixes = ('session_https.',
                       'redis.sessions_https.',
                       )
+    if prefix_selected:
+        https_prefixes = (prefix_selected, )
     for k, v in settings.items():
         for prefix in https_prefixes:
             # only worry about our prefix
@@ -64,7 +75,10 @@ def initialize_https_session_support(config, settings):
     https_session_factory = pyramid_redis_sessions.session_factory_from_settings(https_options)
 
     # okay!  register our factory
-    pyramid_https_session_core.register_https_session_factory(config,
-                                                              settings,
-                                                              https_session_factory
-                                                              )
+    if register_factory:
+        pyramid_https_session_core.register_https_session_factory(config,
+                                                                  settings,
+                                                                  https_session_factory
+                                                                  )
+    # return the factory
+    return https_session_factory

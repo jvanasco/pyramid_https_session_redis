@@ -1,8 +1,12 @@
+0.1.2
+    added optional `prefix_selected` kwarg to `initialize_https_session_support`
+    added optional `register_factory` kwarg to `initialize_https_session_support` that defaults to True.
+
 0.1.1
-	added support for `deserialized_fails_new` bool
+    added support for `deserialized_fails_new` bool
 
 0.1.0
-	fixed the dotted path
+    fixed the dotted path
 
 0.0.1
-	initial import
+    initial import

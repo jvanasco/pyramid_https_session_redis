@@ -20,7 +20,7 @@ requires = [
 
 setup(
     name="pyramid_https_session_redis",
-    version="0.1,1",
+    version="0.1.2",
     description="provides for a 'session_https' secure session object for redis",
     long_description=README,
     classifiers=[
