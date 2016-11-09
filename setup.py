@@ -14,13 +14,13 @@ except:
 
 requires = [
     "pyramid",
-    "pyramid_redis_sessions",
+    "pyramid_session_redis",
     "pyramid_https_session_core",
 ]
 
 setup(
     name="pyramid_https_session_redis",
-    version="0.1.2",
+    version="0.1.3",
     description="provides for a 'session_https' secure session object for redis",
     long_description=README,
     classifiers=[

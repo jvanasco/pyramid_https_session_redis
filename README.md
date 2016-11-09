@@ -1,4 +1,4 @@
-`pyramid_https_session_redis` creates an https bound version of `pyramid_redis_session`
+`pyramid_https_session_redis` creates an https bound version of `pyramid_session_redis`
 
 To configure:
 =============
@@ -38,7 +38,7 @@ Then add this section
 requirements
 ============
 
-This package (obviously) requires `pyramid` and `pyramid_redis` https://github.com/ericrasmussen/pyramid_redis_sessions
+This package (obviously) requires `pyramid` and `pyramid_session_redis` https://github.com/jvanasco/pyramid_session_redis
 
 This package also requires `pyramid_https_session_core` https://github.com/jvanasco/pyramid_https_session_core
 
