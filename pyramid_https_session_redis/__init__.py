@@ -2,7 +2,7 @@ from pyramid.settings import asbool
 
 import pyramid_https_session_core
 
-import pyramid_redis_sessions
+import pyramid_session_redis
 
 
 # ==============================================================================
@@ -72,7 +72,7 @@ def initialize_https_session_support(config, settings, prefix_selected=None, reg
     https_options = RedisConfigurator.recast_options(https_options, 'redis.sessions')
 
     # build a session
-    https_session_factory = pyramid_redis_sessions.session_factory_from_settings(https_options)
+    https_session_factory = pyramid_session_redis.session_factory_from_settings(https_options)
 
     # okay!  register our factory
     if register_factory:

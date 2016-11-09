@@ -14,7 +14,7 @@ except:
 
 requires = [
     "pyramid",
-    "pyramid_redis_sessions",
+    "pyramid_session_redis",
     "pyramid_https_session_core",
 ]
 
