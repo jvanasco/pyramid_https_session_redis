@@ -25,7 +25,7 @@ except:
 requires = [
     "pyramid",
     "pyramid_session_redis>=1.4.0",
-    "pyramid_https_session_core>=0.0.4",
+    "pyramid_https_session_core>=0.0.5",
 ]
 
 setup(
