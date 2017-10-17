@@ -1,5 +1,6 @@
 0.2.0
 	require pyramid_session_redis v1.4.0
+	require pyramid_https_session_core v0.0.5, just for inline versioning
 	uses the exposed bool/dotable attributes in pyramid_session_redis for configuration, so this should be largely untouched as that api changes
 
 0.1.3
