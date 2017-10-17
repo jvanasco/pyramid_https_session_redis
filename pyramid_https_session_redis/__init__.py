@@ -7,6 +7,10 @@ import pyramid_session_redis
 
 # ==============================================================================
 
+__VERSION__ = '0.2.0'
+
+# ==============================================================================
+
 
 class RedisConfigurator(pyramid_https_session_core.SessionBackendConfigurator):
 
@@ -45,21 +49,11 @@ def initialize_https_session_support(config, settings, prefix_selected=None, reg
             if k.startswith(prefix):
                 option_name = k[len(prefix):]
                 # cast certain options to bool
-                if option_name in ('cookie_on_exception',
-                                   'cookie_secure',
-                                   'cookie_httponly',
-                                   'assume_redis_lru',
-                                   'detect_changes',
-                                   'deserialized_fails_new',
-                                   ):
+                if option_name in pyramid_session_redis.configs_bool:
                     v = asbool(v)
                 https_options[option_name] = v
             # some options maybe_dotted
-            for option in ('client_callable',
-                           'serialize',
-                           'deserialize',
-                           'id_generator',
-                           ):
+            for option in pyramid_session_redis.configs_dotable:
                 if option in https_options:
                     https_options[option] = config.maybe_dotted(https_options[option])
 
