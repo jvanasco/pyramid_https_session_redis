@@ -1,13 +1,12 @@
+# pypi
 from pyramid.settings import asbool
-
 import pyramid_https_session_core
-
 import pyramid_session_redis
 
 
 # ==============================================================================
 
-__VERSION__ = '0.2.0'
+__VERSION__ = '0.2.1'
 
 # ==============================================================================
 
