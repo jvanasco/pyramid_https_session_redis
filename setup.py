@@ -7,20 +7,20 @@ from setuptools import find_packages
 
 # store version in the init.py
 import re
+
 with open(
-        os.path.join(
-            os.path.dirname(__file__),
-            'pyramid_https_session_redis', '__init__.py')) as v_file:
-    VERSION = re.compile(
-        r".*__VERSION__ = '(.*?)'",
-        re.S).match(v_file.read()).group(1)
+    os.path.join(
+        os.path.dirname(__file__), "pyramid_https_session_redis", "__init__.py"
+    )
+) as v_file:
+    VERSION = re.compile(r".*__VERSION__ = '(.*?)'", re.S).match(v_file.read()).group(1)
 
 try:
     here = os.path.abspath(os.path.dirname(__file__))
     README = open(os.path.join(here, "README.md")).read()
     README = README.split("\n\n", 1)[0] + "\n"
 except:
-    README = ''
+    README = ""
 
 requires = [
     "pyramid",
@@ -42,14 +42,14 @@ setup(
         "License :: OSI Approved :: MIT License",
     ],
     keywords="web pyramid redis session",
-    packages=['pyramid_https_session_redis'],
+    packages=["pyramid_https_session_redis"],
     author="Jonathan Vanasco",
     author_email="jonathan@findmeon.com",
     url="https://github.com/jvanasco/pyramid_https_session_redis",
     license="MIT",
     include_package_data=True,
     zip_safe=False,
-    tests_require = requires,
-    install_requires = requires,
-    test_suite='tests',
+    tests_require=requires,
+    install_requires=requires,
+    test_suite="tests",
 )
