@@ -1,3 +1,7 @@
+**This package is EOL and support has been discontinued.**
+
+Build Status: ![Python package](https://github.com/jvanasco/pyramid_https_session_redis/workflows/Python%20package/badge.svg)
+
 `pyramid_https_session_redis` creates an https bound version of `pyramid_session_redis`
 
 To configure:

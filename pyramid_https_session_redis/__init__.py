@@ -28,19 +28,21 @@ def initialize_https_session_support(
     config, settings, prefix_selected=None, register_factory=True
 ):
     """
-    Parses config settings, builds a https session factory, optionally registers it, returns it
+    Parses config settings, builds a https session factory, optionally
+    registers it, returns it
 
     Params:
         `config`: pyramid config
         `settings`: pyramid settings
         `prefix_selected=None`: if specified, will only parse this prefix
-        `register_factory=True`: if `True`, will register the factory. If not true, the factory must be registered
+        `register_factory=True`: if `True`, will register the factory.
+            If not true, the factory must be registered.
 
     Returns:
-        this returns the generated factory
+        This returns the generated factory
     """
     https_options = {}
-    https_prefixes = ("session_https.", "redis.sessions_https.")
+    https_prefixes = ("session_https.", "redis.sessions_https.", "redis.session_https.")
     if prefix_selected:
         https_prefixes = (prefix_selected,)
     for k, v in settings.items():
@@ -75,5 +77,6 @@ def initialize_https_session_support(
         pyramid_https_session_core.register_https_session_factory(
             config, settings, https_session_factory
         )
+
     # return the factory
     return https_session_factory

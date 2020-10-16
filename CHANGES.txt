@@ -2,6 +2,7 @@
 	black
 	* upgraded black; 20.8b1
 	* integrated with pre-commit
+	* tox, github actions, tests
 
 0.2.1
 	Python3 classifier
